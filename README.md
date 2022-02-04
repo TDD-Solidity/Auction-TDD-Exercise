@@ -4,11 +4,9 @@ In this TDD exercise the goal is to implement both the functions in the `contrac
 
 Feel free to change the wording of things as you like.
 
-<br/>
-
 ## Setting up
 
-For, clone this repository somewhere on your computer:
+First, clone this repository somewhere on your computer:
 
 ```shell
 git clone https://github.com/TDD-Solidity/Auction-TDD-Exercise.git
@@ -22,6 +20,8 @@ npm install
 
 Note: If you have troubles installing, try using node version 14 or higher.
 
+<br/>
+
 Once the node modules are installed, you should be good to go!
 
 This command will run the tests:
@@ -34,15 +34,11 @@ Note: If you want to run `hardhat test` directly then you will need to have hard
 npm install -g hardhat
 ```
 
-<br/>
-
 ## Good Luck!
 
 Have fun with the exercise, and feel free to ask for help in the slack group!
 
 https://join.slack.com/t/nyc-blockchain-devs/shared_invite/zt-51fxvozl-sU3nB3vtpztBR9YhduNAdg
-
-<br/>
 
 ## Bonus
 
