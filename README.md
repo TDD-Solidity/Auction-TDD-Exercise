@@ -1,46 +1,53 @@
-# Advanced Sample Hardhat Project
+# Auction Bidding Exercise
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+In this TDD exercise the goal is to implement both the functions in the `contracts/AuctionBidding.sol` file and the unit tests in the `test/AuctionBidding.test.ts` file!
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+Feel free to change the wording of things as you like.
 
-Try running some of the following tasks:
+<br/>
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
+## Setting up
 
-# Etherscan verification
-
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
-
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
+For, clone this repository somewhere on your computer:
 
 ```shell
-hardhat run --network ropsten scripts/sample-script.ts
+git clone https://github.com/TDD-Solidity/Auction-TDD-Exercise.git
 ```
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+Then navigate into the project folder and install the npm dependencies:
 
 ```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
+npm install
 ```
 
-# Performance optimizations
+Note: If you have troubles installing, try using node version 14 or higher.
 
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
+Once the node modules are installed, you should be good to go!
+
+This command will run the tests:
+```
+npm test
+```
+
+Note: If you want to run `hardhat test` directly then you will need to have hardhat globally installed:
+```
+npm install -g hardhat
+```
+
+<br/>
+
+## Good Luck!
+
+Have fun with the exercise, and feel free to ask for help in the slack group!
+
+https://join.slack.com/t/nyc-blockchain-devs/shared_invite/zt-51fxvozl-sU3nB3vtpztBR9YhduNAdg
+
+<br/>
+
+## Bonus
+
+This AuctionBidding contract is meant to be a simple exercise.
+
+Consider extending and / or adding more contract functions (and tests!) to accept some payment from the winning bidder and transfer it to original owner's address.
+
+Similarly, this contract could be extended to have the auctioned item be an NFT, and functions could be added and / or updated to allow the NFT original owner the ability to allow the AuctionBidding contract to transfer the auctioned NFT to the winning bidder. 
